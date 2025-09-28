@@ -27,6 +27,10 @@
     "description": {
       "type": "text",
       "maxLength": 255
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }
