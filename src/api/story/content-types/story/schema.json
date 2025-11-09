@@ -15,9 +15,6 @@
       "type": "string",
       "required": true
     },
-    "content": {
-      "type": "blocks"
-    },
     "categories": {
       "type": "relation",
       "relation": "manyToMany",
@@ -31,6 +28,12 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "chapters": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::story-chapter.story-chapter",
+      "mappedBy": "story"
     }
   }
 }

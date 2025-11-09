@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "story_chapters",
+  "info": {
+    "singularName": "story-chapter",
+    "pluralName": "story-chapters",
+    "displayName": "Story Chapter"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "story": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::story.story",
+      "inversedBy": "chapters"
+    },
+    "content": {
+      "type": "blocks",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    }
+  }
+}
